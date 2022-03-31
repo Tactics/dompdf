@@ -43,10 +43,10 @@ class Block_Positioner extends Positioner {
 
     // Relative positionning
     if ( $style->position === "relative" ) {
-      $top =    $style->length_in_pt($style->top,    $cb["h"]);
+      $top =    (float)$style->length_in_pt($style->top,    $cb["h"]);
       //$right =  $style->length_in_pt($style->right,  $cb["w"]);
       //$bottom = $style->length_in_pt($style->bottom, $cb["h"]);
-      $left =   $style->length_in_pt($style->left,   $cb["w"]);
+      $left =   (float)$style->length_in_pt($style->left,   $cb["w"]);
       
       $x += $left;
       $y += $top;

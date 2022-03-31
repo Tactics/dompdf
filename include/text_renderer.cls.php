@@ -123,7 +123,7 @@ class Text_Renderer extends Abstract_Renderer {
       switch ($text_deco) {
 
       default:
-        continue;
+        continue 2;
 
       case "underline":
         $deco_y += $base - $descent + $underline_offset + $line_thickness/2;
@@ -140,7 +140,7 @@ class Text_Renderer extends Abstract_Renderer {
 
       $dx = 0;
       $x1 = $x - self::DECO_EXTENSION;
-      $x2 = $x + $width + $dx + self::DECO_EXTENSION;
+      $x2 = $x + (float)$width + $dx + self::DECO_EXTENSION;
       $this->_canvas->line($x1, $deco_y, $x2, $deco_y, $color, $line_thickness);
     }
     
